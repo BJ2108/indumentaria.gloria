@@ -1,0 +1,425 @@
+* {
+    font-family: "Montserrat-Bold", sans-serif;
+    src: url(fonts/static/Montserrat-Bold.ttf);
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+/* ------------------------------ NAV ------------------------------ */
+
+#nav-div {
+    background-color: #37353E;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    z-index: 10;
+}
+
+/* diseño del contenedor y la imagen del nav */
+#div-icononav {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+#img-nav {
+    width: auto;
+    height: 40px;
+    pointer-events: none;
+}
+
+/* contenedor de los botones en el nav */
+#botones-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+#botones-nav:last-child {
+    margin-right: 20px;
+}
+
+/* diseño de los botones de la barra de navegacion en el header */
+.boton-nav {
+    color: #EEEEEE;
+    border: solid 3px #EEEEEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 35px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.boton-nav:hover {
+    background-color: #EEEEEE;
+    color: #000000;
+}
+
+/* ------------------------------ MAIN ------------------------------ */
+
+
+/* -------------- Seccion de Inicio ------------------ */
+
+#inicio-section {
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* sombra azul degradada hacia abajo del inicio-section */
+#inicio-section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(
+        to bottom,
+        rgba(30, 60, 120, 0) 0%,
+        rgba(30, 60, 120, 0.15) 40%,
+        rgba(30, 60, 120, 0.35) 100%
+    );
+    pointer-events: none;
+}
+
+/* Diseño de las particulas del inicio-section y la seccion de nosotros.html */
+#particles-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* diseño del bloque que contiene el logo de la indumentaria, el texto y el boton "sobre nosotros" del index */
+#logo-div {
+    position: relative;
+    z-index: 2;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* imagen y texto que va en el logo-div */
+#img-logo {
+    width: auto;
+    height: 200px;
+    pointer-events: none;
+}
+
+h3 {
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    user-select: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ------------ Seccion de Sobre Nosotros ---------------- */
+
+#nosotros-section {
+    background-color: #F5F5F5;
+    padding-top: 25vh;
+    text-align: center;
+}
+
+#texto-nosotros {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 70%;
+}
+
+/* diseño del contenedor y las imagenes de referencia que aparecen en la seccion de sobre nosotros */
+#div-nosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.img-nosotros {
+    width: 400px;
+    height: 200px;
+    padding: 20px;
+}
+
+/* ------------ Seccion de Productos ---------------- */
+
+#productos-section {
+    background-color: #132e5f;
+    height: 100vh;
+    scroll-margin-top: 60px;
+}
+
+#div-productos {
+    display: flex;
+    justify-content: center;
+}
+
+/* diseño del contenedor y de los 2 bloques de productos */
+#container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    gap: 50px;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    background-color: #F5F5F5;
+    border: solid 5px black;
+    border-radius: 20px;
+    width: 350px;
+    height: 400px;
+    transition: all 0.2s;
+}
+
+h1 {
+    padding: 30px;
+    padding-bottom: 3%;
+    font-size: 40px;
+    text-align: center;
+    color: #EEEEEE;
+    user-select: none;
+}
+
+.img-productos {
+    width: 300px;
+    margin: 20px auto;
+}
+
+p {
+    color: #000000;
+    user-select: none;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* -------------- Seccion de Contacto (Footer) ------------------ */
+
+#contact-section {
+    background-color: #37353E;
+}
+
+#contactos-div {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* diseño del logo y los iconos que aparecen en el footer */
+#logo-contact {
+    width: auto;
+    height: 60px;
+}
+
+.icono-footer {
+    display: flex;
+    padding: 5px;
+    gap: 15px;
+}
+
+h4 {
+    color: #EEEEEE;
+}
+
+/* -------------- Seccion de Productos ------------------ */
+
+/* ------- Barra de tareas--------- */
+/* diseño de la barra de tareas abajo del nav y diseño de los botones */
+#secciones-productos {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px 0px;
+}
+
+.botones-secciones {
+    padding: 20px;
+}
+
+.boton-section, .boton-section-select {
+    color: #000000;
+    border: solid 3px #000000;
+    align-items: center;
+    width: 150px;
+    height: 35px;
+    padding: 10px;
+    margin-right: 20px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.boton-section-select {
+    background-color: #33313a;
+    color: #EEEEEE;
+}
+
+.boton-section:hover {
+    background-color: #EEEEEE;
+    color: #000000;
+}
+
+.boton-section-select:hover {
+    background-color: #5d5a69;
+}
+
+/* ----------------------------- Productos --------------------------------- */
+
+/* diseño del contenedor de los productos, en la parte de repeat podes ajustar cuantos productos van por fila */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 90%;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 30px auto;
+}
+
+/* diseño de los bloques que contienen los productos */
+.producto {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    border: solid 2px #cecece;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.producto:hover, .block:hover {
+    transform: translateY(-5px);
+}
+
+/* imagen del producto */
+.producto-img {
+    width: 100%;
+    max-height: 220px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.texto-producto {
+    font-size: 20px;
+}
+
+/* diseño del boton de "enviar Whatsapp" con el texto */
+.boton-contacto {
+    background-color: #25D366;
+    padding: 2px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.texto-wsp {
+    font-size: 20px;
+    color: #EEEEEE;
+    text-align: center;
+}
+
+/* -------------------------- Diseño para Celulares ---------------------------- */
+
+@media (max-width: 768px) {
+    /* ----- Nav ------ */
+    #img-nav {
+        height: 35px;
+    }
+
+    #nav-div {
+        height: 8%;
+    }
+
+    /* contenedor de los botones en el nav */
+    #botones-nav {
+        gap: 15px;
+    }
+
+    /* diseño de los botones de la barra de navegacion en el header */
+    .boton-nav {
+        width: 72px;
+        height: 35px;
+        font-size: 13px;
+    }
+
+    /* ----- seccion inicio ------ */
+    /* imagen y texto que va en el logo-div */
+    #img-logo {
+        height: 130px;
+    }
+
+    /* ----- seccion sobre nosotros ------ */
+    #div-nosotros {
+        margin-top: 60px;
+    }
+    
+    .img-nosotros {
+        width: 350px;
+        height: 200px;
+    }
+
+    /* ----- seccion productos ------ */
+    /* diseño del contenedor y de los 2 bloques de productos */
+    #container {
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+
+    .block {
+        width: 250px;
+        height: 300px;
+    }
+
+    .img-productos {
+        width: 200px;
+    }
+
+    /* ------------ Catalogo productos ------------ */
+    
+    .productos {
+        grid-template-columns: repeat(1, 1fr);
+        width: 70%;
+        gap: 20px;
+        max-width: 1400px;
+        margin: 30px auto;
+    }
+
+
+    /* ----- seccion footer ------ */
+    #logo-contact {
+        height: 40px;
+    }
+
+    h4 {
+        font-size: 12px;
+    }
+}
